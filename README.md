@@ -1,7 +1,7 @@
 # Statistics
 
 [![Coverage Status](https://coveralls.io/repos/github/NaagAlgates/NSW-Statistics/badge.svg)](https://coveralls.io/github/NaagAlgates/NSW-Statistics)
-![coverage][coverage_badge]
+[![Github Actions](https://github.com/NaagAlgates/NSW-Statistics/actions/workflows/main.yaml/badge.svg)](https://github.com/NaagAlgates/NSW-Statistics/actions/workflows/main.yaml)
 [![style: very good analysis][very_good_analysis_badge]][very_good_analysis_link]
 [![License: MIT][license_badge]][license_link]
 
@@ -155,7 +155,6 @@ Update the `CFBundleLocalizations` array in the `Info.plist` at `ios/Runner/Info
 }
 ```
 
-[coverage_badge]: coverage_badge.svg
 [flutter_localizations_link]: https://api.flutter.dev/flutter/flutter_localizations/flutter_localizations-library.html
 [internationalization_link]: https://flutter.dev/docs/development/accessibility-and-localization/internationalization
 [license_badge]: https://img.shields.io/badge/license-MIT-blue.svg
