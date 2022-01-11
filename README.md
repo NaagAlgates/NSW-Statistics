@@ -2,6 +2,7 @@
 
 [![Coverage Status](https://coveralls.io/repos/github/NaagAlgates/NSW-Statistics/badge.svg)](https://coveralls.io/github/NaagAlgates/NSW-Statistics)
 [![Github Actions](https://github.com/NaagAlgates/NSW-Statistics/actions/workflows/main.yaml/badge.svg)](https://github.com/NaagAlgates/NSW-Statistics/actions/workflows/main.yaml)
+[![codecov](https://codecov.io/gh/NaagAlgates/NSW-Statistics/branch/master/graph/badge.svg?token=FpaHI2eG8P)](https://codecov.io/gh/NaagAlgates/NSW-Statistics)
 [![style: very good analysis][very_good_analysis_badge]][very_good_analysis_link]
 [![License: MIT][license_badge]][license_link]
 
