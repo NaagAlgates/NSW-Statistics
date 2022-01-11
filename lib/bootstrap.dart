@@ -10,6 +10,7 @@ import 'dart:developer';
 
 import 'package:bloc/bloc.dart';
 import 'package:flutter/widgets.dart';
+import 'package:sentry_flutter/sentry_flutter.dart';
 
 class AppBlocObserver extends BlocObserver {
   @override
@@ -29,11 +30,21 @@ Future<void> bootstrap(FutureOr<Widget> Function() builder) async {
   FlutterError.onError = (details) {
     log(details.exceptionAsString(), stackTrace: details.stack);
   };
-
   await runZonedGuarded(
     () async {
       await BlocOverrides.runZoned(
-        () async => runApp(await builder()),
+        () => SentryFlutter.init(
+          (options) {
+            options.dsn =
+                'https://8badf9986a9441c7b037c164db228526@o1113262.ingest.sentry.io/6143524';
+            // Set tracesSampleRate to 1.0 to capture 100% of transactions
+            // for performance monitoring. We recommend adjusting this
+            // value in production.
+            // ignore: cascade_invocations
+            options.tracesSampleRate = 1.0;
+          },
+          appRunner: () async => runApp(await builder()),
+        ),
         blocObserver: AppBlocObserver(),
       );
     },
